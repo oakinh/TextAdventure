@@ -9,6 +9,8 @@ private:
     float attack;
     float defense;
     float magicDefense;
+    float accuracy;
+    float evasion;
 
 public:
     LivingEntity(
@@ -16,7 +18,12 @@ public:
         float characterHealth, 
         float characterAttack, 
         float characterDefense,
-        float characterMagicDefense
+        float characterMagicDefense,
+        float characterAccuracy,
+        float characterEvasion
     );
     ~LivingEntity();
+
+    bool basicAttack(LivingEntity& target);
+    void takeDamage(int damage);
 };

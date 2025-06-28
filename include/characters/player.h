@@ -5,12 +5,26 @@ private:
     float reputation;
 
 public:
-    Player(std::string playerName, float playerHealth, float playerAttack, float playerDefense, float playerMagicDefense, float playerReputation)
-        : LivingEntity(playerName, playerHealth, playerAttack, playerDefense, playerMagicDefense),
+    Player(
+        std::string playerName, 
+        float playerHealth, 
+        float playerAttack, 
+        float playerDefense, 
+        float playerMagicDefense, 
+        float playerReputation,
+        float playerAccuracy,
+        float playerEvasion
+    )
+        : LivingEntity(
+            playerName, 
+            playerHealth, 
+            playerAttack, 
+            playerDefense, 
+            playerMagicDefense,
+            playerAccuracy,
+            playerEvasion
+        ),
         reputation(playerReputation)
     {}
 
-    bool basicAttack() {
-        
-    }
 };
