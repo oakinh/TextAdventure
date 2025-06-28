@@ -1,7 +1,6 @@
 #pragma once
 
 #include <string>
-#include <iostream>
 
 class LivingEntity {
 private:
@@ -9,9 +8,15 @@ private:
     float health;
     float attack;
     float defense;
-    float magicdefense;
+    float magicDefense;
 
 public:
-    LivingEntity(std::string characterName, float characterHealth, float characterAttack, float characterDefense);
+    LivingEntity(
+        std::string characterName, 
+        float characterHealth, 
+        float characterAttack, 
+        float characterDefense,
+        float characterMagicDefense
+    );
     ~LivingEntity();
 };

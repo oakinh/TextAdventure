@@ -1,3 +1,5 @@
+#include "living_entity.h"
+
 class Player : public LivingEntity {
 private:
     float reputation;
@@ -8,5 +10,7 @@ public:
         reputation(playerReputation)
     {}
 
-    
+    bool basicAttack() {
+        
+    }
 };

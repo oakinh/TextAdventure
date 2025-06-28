@@ -1,2 +1,2 @@
-#include "livingentity.h"
+#include "characters/living_entity.h"
 
