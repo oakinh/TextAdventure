@@ -9,12 +9,13 @@ constexpr const MaterialProperties* findProperties(MaterialSpec m) {
 }
 
 std::string_view getMaterialCategoryString(MaterialCategory m) {
+    using enum MaterialCategory;
     switch (m) {
-        case MaterialCategory::Wood: return "Wood";
-        case MaterialCategory::Stone: return "Stone";
-        case MaterialCategory::Metal: return "Metal";
-        case MaterialCategory::Bone: return "Bone";
-        case MaterialCategory::Ethereal: return "Ethereal";
+        case Wood: return "Wood";
+        case Stone: return "Stone";
+        case Metal: return "Metal";
+        case Bone: return "Bone";
+        case Ethereal: return "Ethereal";
         default: return "???"; 
     }
 }
