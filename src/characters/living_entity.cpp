@@ -1,21 +1,15 @@
 #include "characters/living_entity.h"
-#include <random>
+#include "util.h"
 
-void LivingEntity::takeDamage(int damage) {
+void LivingEntity::takeDamage(float damage) {
     this->health -= damage;
 }
 
 bool LivingEntity::basicAttack(LivingEntity& target) {
-    // Accuracy achieved is a 1-100 scale, < 10 is a miss
     float hitChance = this->accuracy - target.evasion;
+    if (hitChance > generateRandom(1, 100)) return false;
 
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<> distr(1, 100);
-
-    if (hitChance > distr(gen)) return false;
-
-    int damage = this->attack - target.defense;
+    float damage = this->attack - target.defense;
     target.takeDamage(damage);
     return true;
 }

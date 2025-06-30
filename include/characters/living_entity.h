@@ -14,7 +14,7 @@ private:
 
 public:
     LivingEntity(
-        std::string characterName, 
+        const std::string& characterName, 
         float characterHealth, 
         float characterAttack, 
         float characterDefense,
@@ -22,8 +22,7 @@ public:
         float characterAccuracy,
         float characterEvasion
     );
-    ~LivingEntity();
 
     bool basicAttack(LivingEntity& target);
-    void takeDamage(int damage);
+    void takeDamage(float damage);
 };

@@ -1,3 +1,5 @@
+#pragma once
+
 #include "living_entity.h"
 
 class Player : public LivingEntity {
